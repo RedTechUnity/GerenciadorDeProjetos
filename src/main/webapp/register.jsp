@@ -23,15 +23,15 @@
                             <div class="text-center">
                                 <h4 class="text-dark mb-4">Criar nova conta!</h4>
                             </div>
-                            <form class="user">
+                            <form action="CadastrarProjetoServlet" method="post">
                                 <div class="row mb-3">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="First Name" name="first_name"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="exampleLastName" placeholder="Last Name" name="last_name"></div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="nome" placeholder="Nome" name="nome"></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="sobrenome" placeholder="Sobrenome" name="sobrenome"></div>
                                 </div>
-                                <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address" name="email"></div>
+                                <div class="mb-3"><input class="form-control form-control-user" type="email" id="email" aria-describedby="email" placeholder="Email" name="email"></div>
                                 <div class="row mb-3">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Password" name="password"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Repeat Password" name="password_repeat"></div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="senha" placeholder="Senha" name="senha"></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="confirmar-senha" placeholder="Confirmar Senha" name="confirmar-senha"></div>
                                 </div><button class="btn btn-primary d-block btn-user w-100" type="submit">Criar conta</button>
                                 <hr><a class="btn btn-primary d-block btn-google btn-user w-100 mb-2" role="button"><i class="fab fa-google"></i>&nbsp; Cadastrar com Google</a><a class="btn btn-primary d-block btn-facebook btn-user w-100" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Cadastrar com Facebook</a>
                                 <hr>

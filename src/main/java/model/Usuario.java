@@ -6,6 +6,19 @@ public class Usuario {
 	private String sobrenome;
 	private String email;
 	private String senha;
+	private static int contadorUsuario;
+	
+	public Usuario() {
+		this.id = contadorUsuario++;
+	}
+	
+	public Usuario(String nome, String sobrenome, String email, String senha) {
+		this.id = contadorUsuario++;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.email = email;
+		this.senha = senha;
+	}
 	public String getNome() {
 		return nome;
 	}
