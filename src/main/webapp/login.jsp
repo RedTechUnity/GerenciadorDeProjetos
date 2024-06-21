@@ -28,9 +28,9 @@
                                     <div class="text-center">
                                         <h4 class="text-dark mb-4">Seja bem vindo!</h4>
                                     </div>
-                                    <form class="user">
-                                        <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>
-                                        <div class="mb-3"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="password"></div>
+                                    <form class="user" action="LoginServlet" method="post">
+                                        <div class="mb-3"><input class="form-control form-control-user" type="email" id="email" aria-describedby="email" placeholder="Insira o Email" name="email"></div>
+                                        <div class="mb-3"><input class="form-control form-control-user" type="password" id="senha" placeholder="Senha" name="senha"></div>
                                         <div class="mb-3">
                                             <div class="custom-checkbox small">
                                                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Lembrar usuário</label></div>
