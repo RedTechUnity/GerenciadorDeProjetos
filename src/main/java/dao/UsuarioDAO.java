@@ -21,9 +21,9 @@ public class UsuarioDAO {
 	        try {
 	            PreparedStatement stmt = connection.prepareStatement(sql);
 	            stmt.setString(1, usuario.getNome());
-	            stmt.setString(1, usuario.getSobrenome());
-	            stmt.setString(2, usuario.getEmail());
-	            stmt.setString(3, usuario.getSenha());
+	            stmt.setString(2, usuario.getSobrenome());
+	            stmt.setString(3, usuario.getEmail());
+	            stmt.setString(4, usuario.getSenha());
 	            stmt.execute();
 	            stmt.close();
 	        } catch (SQLException e) {

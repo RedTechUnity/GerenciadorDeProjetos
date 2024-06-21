@@ -12,24 +12,37 @@ import java.io.IOException;
 
 @WebServlet("/CadastrarUsuarioServlet")
 public class CadastrarUsuarioServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String nome = request.getParameter("nome");
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public CadastrarUsuarioServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.doPost(request, response);
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		String nome = request.getParameter("nome");
         String sobrenome = request.getParameter("sobrenome");
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
         String confirmarSenha = request.getParameter("confirmar-senha");
+        
+    	Usuario usuario = new Usuario(nome, sobrenome, email, senha);            
 
-        if (confirmarSenha.equals(senha)) {
-        	Usuario usuario = new Usuario();
-            usuario.setNome(nome);
-            usuario.setSobrenome(sobrenome);
-            usuario.setEmail(email);
-            usuario.setSenha(senha);
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        usuarioDAO.cadastrarUsuario(usuario);
+		response.sendRedirect("login.jsp");
 
-            UsuarioDAO usuarioDAO = new UsuarioDAO();
-            usuarioDAO.cadastrarUsuario(usuario);
-            response.sendRedirect("login.jsp");
-        }       
 
     }
 }

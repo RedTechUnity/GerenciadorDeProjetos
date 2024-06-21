@@ -1,19 +1,15 @@
 package model;
 
 public class Usuario {
-	private int id;
 	private String nome;
 	private String sobrenome;
 	private String email;
 	private String senha;
-	private static int contadorUsuario;
 	
 	public Usuario() {
-		this.id = contadorUsuario++;
 	}
 	
 	public Usuario(String nome, String sobrenome, String email, String senha) {
-		this.id = contadorUsuario++;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.email = email;
@@ -43,10 +39,5 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public int getId() {
-		return id;
-	}
-	
-	
 
 }
