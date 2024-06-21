@@ -3,12 +3,24 @@ package model;
 import java.time.LocalDate;
 
 public class Projeto {
-	private int id;
 	private String titulo;
 	private String descricao;
 	private LocalDate dataFinal;
 	private String status;
 	private int usuarioId;
+	
+	
+	public Projeto() {
+	}
+
+	public Projeto(String titulo, String descricao, LocalDate dataFinal, String status, int usuarioId) {
+		this.titulo = titulo;
+		this.descricao = descricao;
+		this.dataFinal = dataFinal;
+		this.status = status;
+		this.usuarioId = usuarioId;
+	}
+	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -39,8 +51,5 @@ public class Projeto {
 	public void setUsuarioId(int usuarioId) {
 		this.usuarioId = usuarioId;
 	}
-	public int getId() {
-		return id;
-	}
-
+	
 }
