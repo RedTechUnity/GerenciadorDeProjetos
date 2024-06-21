@@ -8,6 +8,9 @@ Certifique-se de que você tem os seguintes softwares instalados:
 
 1. Apache Tomcat 9.0.x
 2. MySQL Server 5.7 ou superior
+3. Eclipse IDE
+4. JDK 19
+5. JRE 19
 
 ## Configuração do Banco de Dados
 
@@ -16,24 +19,25 @@ Certifique-se de que você tem os seguintes softwares instalados:
 
     ```sql
     CREATE DATABASE gerenciamento_projetos;
-    USE gerenciamento_projetos;
-
-    CREATE TABLE usuarios (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        nome VARCHAR(100),
-        email VARCHAR(100),
-        senha VARCHAR(100)
-    );
-
-    CREATE TABLE projetos (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        titulo VARCHAR(100),
-        descricao TEXT,
-        dataFinal DATE,
-        status VARCHAR(50),
-        usuarioId INT,
-        FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
-    );
+	USE gerenciamento_projetos;
+	
+	CREATE TABLE usuarios (
+	    id INT AUTO_INCREMENT PRIMARY KEY,
+	    nome VARCHAR(100),
+	    sobrenome VARCHAR(100),
+	    email VARCHAR(100),
+	    senha VARCHAR(100)
+	);
+	
+	CREATE TABLE projetos (
+	    id INT AUTO_INCREMENT PRIMARY KEY,
+	    titulo VARCHAR(100),
+	    descricao TEXT,
+	    dataFinal DATE,
+	    status VARCHAR(50),
+	    usuarioId INT,
+	    FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
+	);
     ```
 
 3. No arquivo `src/main/java/service/Conexao.java`, atualize o usuário e a senha do banco de dados:
@@ -42,10 +46,11 @@ Certifique-se de que você tem os seguintes softwares instalados:
 ## Configuração do Tomcat
 
 1. Certifique-se de que o Tomcat está instalado e configurado corretamente.
+2. Abra o projeto utilizando o Eclipse em um servidor Tomcat.
 
 ## Acesso à Aplicação
 
-1. Abra o navegador e acesse `http://localhost:8080/GerenciadorDeProjetos`.
+1. Abra o navegador e acesse `http://localhost:8080/GerenciadorDeProjetos/login.jsp`.
 2. A aplicação deve estar funcionando e conectada ao banco de dados MySQL.
 
 ## Solução de Problemas

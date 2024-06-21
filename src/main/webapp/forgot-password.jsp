@@ -28,7 +28,7 @@
                                         <p class="mb-4">Nós entendemos, problemas acontecem. Entre com o email abaixo e entraremos em contato com próximas orientações!</p>
                                     </div>
                                     <form class="user">
-                                        <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div><button class="btn btn-primary d-block btn-user w-100" type="submit">Reset Password</button>
+                                        <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Entre com o endereço de email..." name="email"></div><button class="btn btn-primary d-block btn-user w-100" type="submit">Recuperar Senha</button>
                                     </form>
                                     <div class="text-center">
                                         <hr><a class="small" href="register.jsp">Criar nova conta!</a>

@@ -33,7 +33,6 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="senha" placeholder="Senha" name="senha"></div>
                                     <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="confirmar-senha" placeholder="Confirmar Senha" name="confirmar-senha"></div>
                                 </div><button class="btn btn-primary d-block btn-user w-100" type="submit">Criar conta</button>
-                                <hr><a class="btn btn-primary d-block btn-google btn-user w-100 mb-2" role="button"><i class="fab fa-google"></i>&nbsp; Cadastrar com Google</a><a class="btn btn-primary d-block btn-facebook btn-user w-100" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Cadastrar com Facebook</a>
                                 <hr>
                             </form>
                             <div class="text-center"><a class="small" href="forgot-password.jsp">Esqueceu a senha?</a></div>
